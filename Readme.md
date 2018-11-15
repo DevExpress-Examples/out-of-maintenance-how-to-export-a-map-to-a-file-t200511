@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml](./CS/Exporting/MainWindow.xaml) (VB: [MainWindow.xaml.vb](./VB/Exporting/MainWindow.xaml.vb))
+* [MainWindow.xaml.cs](./CS/Exporting/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/Exporting/MainWindow.xaml.vb))
+<!-- default file list end -->
 # How to export a map to a file
 
 
