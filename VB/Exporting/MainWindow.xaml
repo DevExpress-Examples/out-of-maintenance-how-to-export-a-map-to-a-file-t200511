@@ -4,7 +4,7 @@
         xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" 
         xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
         xmlns:dxm="http://schemas.devexpress.com/winfx/2008/xaml/map"
-        xmlns:dxp="clr-namespace:DevExpress.XtraPrinting;assembly=DevExpress.Printing.v14.2.Core"
+        xmlns:dxp="clr-namespace:DevExpress.XtraPrinting;assembly=DevExpress.Printing.v21.1.Core"
         x:Class="Exporting.MainWindow"
         Title="MainWindow" Height="600" Width="800">
     <Window.Resources>
@@ -12,14 +12,14 @@
                             MethodName="GetValues"
                             ObjectType="{x:Type sys:Enum}">
             <ObjectDataProvider.MethodParameters>
-                <x:Type TypeName="dxp:ExportFormat"/>
+                <x:Type TypeName="dxp:ExportFormat" />
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
         <ObjectDataProvider x:Key="MapPrintSizeModeValues" 
                             MethodName="GetValues"
                             ObjectType="{x:Type sys:Enum}">
             <ObjectDataProvider.MethodParameters>
-                <x:Type TypeName="dxm:MapPrintSizeMode"/>
+                <x:Type TypeName="dxm:MapPrintSizeMode" />
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
     </Window.Resources>
@@ -29,11 +29,11 @@
             <dxlc:LayoutItem VerticalAlignment="Stretch">
                 <dxm:MapControl x:Name="mapControl">
                     <dxm:MapControl.PrintOptions>
-                        <dxm:MapPrintOptions SizeMode="{Binding SelectedItem, ElementName=cbPrintSizeMode}"/>
+                        <dxm:MapPrintOptions SizeMode="{Binding SelectedItem, ElementName=cbPrintSizeMode}" />
                     </dxm:MapControl.PrintOptions>
                     <dxm:ImageTilesLayer>
                         <dxm:ImageTilesLayer.DataProvider>
-                            <dxm:BingMapDataProvider BingKey="Your Bing Key"/>
+                            <dxm:BingMapDataProvider BingKey="Your Bing Key" />
                         </dxm:ImageTilesLayer.DataProvider>
                     </dxm:ImageTilesLayer>
                 </dxm:MapControl>
@@ -42,15 +42,15 @@
                 <dxlc:LayoutItem Label="Print Size Mode:">
                     <ComboBox x:Name="cbPrintSizeMode"
                               ItemsSource="{Binding Source={StaticResource MapPrintSizeModeValues}}"
-                              SelectedIndex="0"/>
+                              SelectedIndex="0" />
                 </dxlc:LayoutItem>
                 <dxlc:LayoutItem Label="Export to" AddColonToLabel="True">
                     <ComboBox x:Name="cbExportFormat"  
             			ItemsSource="{Binding Source={StaticResource ExportFormatValues}}"
-            			SelectedIndex="0"/>
+            			SelectedIndex="0" />
                 </dxlc:LayoutItem>
                 <dxlc:LayoutItem Width="100">
-                    <Button Content="Export" Click="Button_Click"/>
+                    <Button Content="Export" Click="Button_Click" />
                 </dxlc:LayoutItem>
             </dxlc:LayoutGroup>
         </dxlc:LayoutControl>
